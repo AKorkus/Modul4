@@ -77,6 +77,7 @@ def kalkulator():
     # Gdyby ktoś podał jeden składnik w dzieleniu/odejmowaniu:
     if dzialanie % 2 == 0 and len(liczby) < 2:
         liczby.append(0+int(dzialanie/4))
+        liczby.append(0+int(dzialanie/4))
     # Ustawiam raport:
     raport = f"{slownik_dzialan[dzialanie][1]} "
     for i in liczby:
@@ -84,6 +85,7 @@ def kalkulator():
     raport = raport[:-3]
     logging.debug(raport)
     # Obliczanie wyniku:
+
     wynik = slownik_dzialan[dzialanie][0](liczby)
     logging.debug(f"Wynik to: {wynik}")
     return wynik
