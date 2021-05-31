@@ -27,7 +27,10 @@ def mnozenie(pierwsza, druga, *args):
 
 
 def dzielenie(licznik, mianownik):
-    return licznik/mianownik
+    try:
+        return licznik/mianownik
+    except ZeroDivisionError:
+        logging.warning("Dzielenie przez zero - błąd!")
 
 
 slownik_dzialan = {
@@ -145,7 +148,7 @@ def kalkulator():
         wynik = slownik_dzialan[dzialanie][0](*liczby)
         logging.debug(f"Wynik to: {wynik}")
         return wynik
-    except:
+    except TypeError:
         logging.debug("Wybrano za mało argumentów!!!")
 
 
