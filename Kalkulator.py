@@ -65,10 +65,10 @@ def zaczyt_liczb(dzialanie):
     """
     Funkcja zaczytuje liczby z inputu użytkownika w zależności od działania:
     1,3 (dodawanie, mnożenie):
-    Dowolna ilość argumentów.
+    Dowolna ilość argumentów ale minimum 2.
     2,4 (odejmowanie, dzielenie):
-    Funkcja zaczytuje maksymalnie 2 argumenty.
-    Zaczytywanie argumentów można zakończyć pustym inputem (sam enter).
+    Funkcja zaczytuje 2 argumenty.
+    Zaczytywanie argumentów można zakończyć pustym inputem (sam enter) po podaniu 2 argumentów.
     Wygenerowane inputy przetworzy na listę floatów (przy pomocy konwertera).
     Przy nieprawidłowym wprowadzeniu liczby raczy poinformować użytkownika o błędzie i zapyta jeszcze raz.
     """
@@ -80,7 +80,7 @@ def zaczyt_liczb(dzialanie):
     while True:
         liczba = input(f"Podaj składnik {i}:")
         # Gdyby ktoś pisał ułamek z przecinkiem:
-        if len(liczba) == 0:
+        if len(liczby) > 1 and len(liczba) == 0:
             break
         # Tu mogą pojawić się błędy:
         try:
