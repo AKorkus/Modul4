@@ -57,8 +57,6 @@ def konwerter(liczba):
     liczba = float(liczba)
     return liczba
 
-# Zaczytanie liczb:
-
 
 def zaczyt_liczb(dzialanie):
     """
@@ -91,9 +89,6 @@ def zaczyt_liczb(dzialanie):
         # Tutaj ustawiam ogranicznik dzielenia i odejmowania:
         if dzialanie % 2 == 0 and i > 2:
             break
-    # Gdyby ktoś podał jeden składnik lub mniej w dzieleniu/odejmowaniu:
-#    for i in range(len(liczby), 2):
-#        liczby.append(0+int(dzialanie/3))
     return liczby
 
 
@@ -130,8 +125,6 @@ def raportowanie(dzialanie, liczby):
         raport = raport[:-3]
     logging.debug(raport)
     return raport
-
-# Definiuję kalkulator:
 
 
 def kalkulator():
